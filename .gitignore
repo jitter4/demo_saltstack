@@ -1,0 +1,10 @@
+*.pyc
+*.DS_Store
+.idea
+.vscode
+settings.py
+*.log*
+/device_manager/settings.py
+.coverage*
+venv/
+
