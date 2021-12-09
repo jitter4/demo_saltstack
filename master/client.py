@@ -1,6 +1,6 @@
-import salt.config
-master_opts = salt.config.client_config('/etc/salt/master')
+import salt.client
+
+local = salt.client.LocalClient()
 
 if __name__ == '__main__':
-    for key in master_opts:
-        print(str(key) + '->' + str(master_opts[key]))
+    local.cmd('*', 'test.fib', [10])
